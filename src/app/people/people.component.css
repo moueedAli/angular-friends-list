@@ -2,5 +2,6 @@
     display: flex;
     box-sizing: border-box;
     padding: 0.5em;
-    border: 1px solid #DDD
+    border: 1px solid #DDD;
+    justify-content: space-between;
 }

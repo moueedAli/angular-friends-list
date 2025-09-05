@@ -4,14 +4,15 @@
   <button (click)="addFriend()">Add friend</button>
 </div>
 <div class="favorite">
-  <p>My favorite person is: {{ favourite }}</p>
+  <p>My favorite person is: {{ favourite.join(', ') }}</p>
 </div>
 <div class="people">
   @for (person of people; track person) {
     <app-people
       [person]="person"
       (voted)="setFavourites($event)"
-      [lastVoted]="person===favourite"
+      (remove)="removeFavourite($event)"
+      [lastVoted]="favourite.includes(person)"
     ></app-people>
   }
 </div>

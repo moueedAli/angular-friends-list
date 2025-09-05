@@ -3,5 +3,6 @@
 @if (!this.lastVoted()) {
     <button (click)="this.voted.emit(this.person())">Vote</button>
 } @else {
-    <p>Curent selection</p>
+  <p>Current selection</p>
+  <button (click)="this.remove.emit(this.person())">Remove</button>
 }
