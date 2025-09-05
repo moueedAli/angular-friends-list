@@ -8,8 +8,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
   newFriend: string | null = null;
   favorite: string | null = null;
+  favourite: string = "No friend chosen"
+
 
   people: string[] = ['lewis', 'jules', 'ed', 'nathan', 'dave', 'nigel'];
+
+  setFavourites(fave: string) {
+    this.favourite = fave
+  }
 
   addFriend() {
     if (!this.newFriend) {
